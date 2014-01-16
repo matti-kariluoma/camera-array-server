@@ -1,0 +1,20 @@
+
+<ul>
+	<li><a href="all/">All Cameras</a></li>
+%for camera_id in registered_cameras:
+	<li><a href="{{camera_id}}/">{{camera_id}}</a> </li>
+%end
+</ul>
+
+<form method='POST'>
+	<p>Create a new Camera:</p>
+	<p>
+		<label for='camera_id'>Camera ID</label>
+		<input name='camera_id' type='text'>
+	</p>
+	<button type='submit' value='Create Camera'>Create Camera</button>
+</form>
+
+%rebase base title='LLFS - Cameras'
+
+

@@ -1,0 +1,24 @@
+This is a RESTful server that both users and cameras talk to (this server 
+is a middleman).
+
+The API:
+request
+	expected response
+	other response
+	...
+
+GET /cameras/<all,cid>/capture
+	200 OK\n\n/image/<iid>
+	40X Camera not found
+	50X Camera error
+	
+GET /images/<iid>
+	200 OK
+	40X Not ready
+
+POST /cameras/<cid>
+	200 OK
+	50X ID collision
+
+POST /cameras/alias/<alias>
+	200 OK
